@@ -10,19 +10,21 @@
     <body>
         <p>physics question:</p>
         Answer: <input type="text" name="answer" id="answer"><br>
-        <small id="small"></small>
+        <p id="small"></p>
         <input type="button" onclick="submit()" value="Submit">
+        <p id="text"></p>
         <img id="glove" src="glove.png"/>
         <img id="box" src="box.png"/>
         <script>
         function submit() {
-            answer = document.getElementById("answer").value;
+            const answer = document.getElementById('answer').value;
+            document.getElementById('text').innerHTML = answer;
             if (answer == "hello"){
-                document.getElementById("glove").style.display = "block";
-                document.getElementById("box").style.display = "block";
+                document.getElementById('glove').style.display = "block";
+                document.getElementById('box').style.display = "block";
             }
             else{
-                document.getElementById("small").textContent = "Incorrect";
+                document.getElementById('small').innerHTML = "Incorrect";
             }
         }
         </script>
