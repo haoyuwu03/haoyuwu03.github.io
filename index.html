@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <style>
+            #image {
+                display: none;
+            }
+        </style>
+    </head>
     <body>
         <p>physics question:</p>
 
         <form id="frm1">
             Answer: <input type="text" name="answer" id="answer"><br>
-            <input type="button" onclick="myFunction()" value="Submit">
+            <small id="small"></small>
+            <input type="button" onclick="submit()" value="Submit">
         </form>
-
+        <img id="glove" src="glove.png"/>
+        <img id="box" src="box.png"/>
         <script>
-        function myFunction() {
+        function submit() {
             answer = document.getElementById("answer");
-            print(answer);
+            if (answer == "hello"){
+                document.getElementById("glove").style.display = "block";
+                document.getElementById("box").style.display = "block";
+            }
+            else{
+                document.getElementById("small").textContent = "Incorrect";
+            }
         }
         </script>
     </body>
