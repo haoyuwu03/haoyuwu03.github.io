@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <body>
-        <div>
-            <form action="index.html" method="post" id="code">
-                <input type="text" id="answer" name="answer" placeholder="answer" />
-                <button type="submit" class="full">Submit</button>
-                <small id="small"></small>
-            </form>
-        </div>
-        <script src="app.js"></script>
+        <p>physics question:</p>
+
+        <form id="frm1">
+            Answer: <input type="text" name="answer" id="answer"><br>
+            <input type="button" onclick="myFunction()" value="Submit">
+        </form>
+
+        <script>
+        function myFunction() {
+            answer = document.getElementById("answer");
+            print(answer);
+        }
+        </script>
     </body>
 </html>
