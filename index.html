@@ -18,10 +18,11 @@
         <script>
         function submit() {
             const answer = document.getElementById('answer').value;
-            document.getElementById('text').innerHTML = answer;
             if (answer == "hello"){
                 document.getElementById('glove').style.display = "block";
                 document.getElementById('box').style.display = "block";
+                document.getElementById('small').innerHTML = "";
+                document.getElementById('text').innerHTML = "Code:"
             }
             else{
                 document.getElementById('small').innerHTML = "Incorrect";
