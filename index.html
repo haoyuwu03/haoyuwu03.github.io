@@ -19,7 +19,7 @@
         <img id="box" src="box.png"/>
         <script>
         function submit() {
-            answer = document.getElementById("answer");
+            answer = document.getElementById("answer").value;
             if (answer == "hello"){
                 document.getElementById("glove").style.display = "block";
                 document.getElementById("box").style.display = "block";
